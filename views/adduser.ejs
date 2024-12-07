@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%- include('layouts/header') %>
 
 <div class="container px-5 my-5">
@@ -33,3 +34,36 @@
 </div>
 
 <%- include('layouts/footer') %>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= titulo %></title>
+  </head>
+  <body>
+    <h1><%= titulo %></h1>
+    <form action="/add" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="phone">Teléfono:</label>
+        <input type="text" id="phone" name="phone" />
+      </div>
+      <div>
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" name="image" />
+      </div>
+      <button type="submit">Agregar Usuario</button>
+    </form>
+    <a href="/">Volver a la lista de usuarios</a>
+  </body>
+</html>
+>>>>>>> dd9d117985b26e618e38928d2878d258a5bf93b7

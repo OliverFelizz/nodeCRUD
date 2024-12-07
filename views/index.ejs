@@ -1,4 +1,5 @@
 <%- include('layouts/header') %>
+<<<<<<< HEAD
 
 <div class="container">
     <div class="row my-4">
@@ -34,6 +35,52 @@
             </div>
         </div>
     </div>
+=======
+<div class="container my-5">
+  <h1>Inventario de Productos</h1>
+  <a href="/add" class="btn btn-success mb-3">Agregar Producto</a>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.code %></td>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td>
+          <img
+            src="/upload/<%= product.image %>"
+            alt="Producto"
+            style="width: 100px"
+          />
+        </td>
+        <td><%= product.quantity %></td>
+        <td>$<%= product.price.toFixed(2) %></td>
+        <td>
+          <form
+            action="/delete/<%= product._id %>"
+            method="post"
+            style="display: inline"
+          >
+            <button type="submit" class="btn btn-danger btn-sm">
+              Eliminar
+            </button>
+          </form>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+>>>>>>> dd9d117985b26e618e38928d2878d258a5bf93b7
 </div>
-
 <%- include('layouts/footer') %>
