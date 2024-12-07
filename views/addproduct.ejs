@@ -1,0 +1,56 @@
+<%- include('layouts/header') %>
+<div class="container my-5">
+  <h1>Agregar Producto</h1>
+  <form action="/add" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="code" class="form-label">Código</label>
+      <input type="text" class="form-control" id="code" name="code" required />
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="name" name="name" required />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Descripción</label>
+      <textarea
+        class="form-control"
+        id="description"
+        name="description"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Cantidad</label>
+      <input
+        type="number"
+        class="form-control"
+        id="quantity"
+        name="quantity"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Precio</label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        name="price"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Imagen</label>
+      <input
+        type="file"
+        class="form-control"
+        id="image"
+        name="image"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Producto</button>
+  </form>
+</div>
+<%- include('layouts/footer') %>
